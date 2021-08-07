@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta name="author" content="@熊仔其人">
-    <title>给狗子的抽奖活动</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+    <title>转盘抽奖效果</title>
     <!-- 这里是css部分 -->
     <style>
         #bg {
@@ -39,7 +40,7 @@
     <script>
         var oPointer = document.getElementsByTagName("img")[0];
         var oTurntable = document.getElementsByTagName("img")[1];
-        var cat = 51.4; //总共7个扇形区域，每个区域约51.4度
+        var cat = 36.0; //总共7个扇形区域，每个区域约51.4度
         var num = 0; //转圈结束后停留的度数
         var offOn = true; //是否正在抽奖
         oPointer.onclick = function () {
@@ -62,13 +63,16 @@
                     setTimeout(function () {
                         offOn = !offOn;
                         num = rdm % 360;
-                        if (num <= cat * 1) { alert("水果包月"); console.log("rdm=" + rdm + "，num=" + num + "，" + "水果包月"); }
-                        else if (num <= cat * 2) { alert("衣服包月"); console.log("rdm=" + rdm + "，num=" + num + "，" + "衣服包月"); }
-                        else if (num <= cat * 3) { alert("实现愿望"); console.log("rdm=" + rdm + "，num=" + num + "，" + "实现愿望"); }
-                        else if (num <= cat * 4) { alert("一日游"); console.log("rdm=" + rdm + "，num=" + num + "，" + "一日游"); }
-                        else if (num <= cat * 5) { alert("1块"); console.log("rdm=" + rdm + "，num=" + num + "，" + "1块"); }
-                        else if (num <= cat * 6) { alert("买新手机"); console.log("rdm=" + rdm + "，num=" + num + "，" + "买新手机"); }
-                        else if (num <= cat * 7) { alert("未中奖"); console.log("rdm=" + rdm + "，num=" + num + "，" + "未中奖"); }
+                        if (num <= cat * 1) { alert("恭喜你中奖啦！清空购物车"); console.log("rdm=" + rdm + "，num=" + num + "，" + "清空购物车"); }
+                        else if (num <= cat * 2) { alert("恭喜你中奖啦！旅游"); console.log("rdm=" + rdm + "，num=" + num + "，" + "旅游"); }
+                        else if (num <= cat * 3) { alert("恭喜你中奖啦！吃饭看电影一日游"); console.log("rdm=" + rdm + "，num=" + num + "，" + "吃饭看电影一日游"); }
+                        else if (num <= cat * 4) { alert("恭喜你中奖啦！可以满足你1个愿望"); console.log("rdm=" + rdm + "，num=" + num + "，" + "实现愿望"); }
+                        else if (num <= cat * 5) { alert("恭喜你中奖啦！一套衣服"); console.log("rdm=" + rdm + "，num=" + num + "，" + "买衣服"); }
+                        else if (num <= cat * 6) { alert("恭喜你中奖啦！1块钱"); console.log("rdm=" + rdm + "，num=" + num + "，" + "1块钱"); }
+                        else if (num <= cat * 7) { alert("恭喜你中奖啦！1件首饰"); console.log("rdm=" + rdm + "，num=" + num + "，" + "首饰"); }
+                        else if (num <= cat * 8) { alert("恭喜你中奖啦！1部iPhone"); console.log("rdm=" + rdm + "，num=" + num + "，" + "iPhone"); }
+                        else if (num <= cat * 9) { alert("很遗憾，你没有中奖！"); console.log("rdm=" + rdm + "，num=" + num + "，" + "未中奖"); }
+                        else if (num <= cat * 10) { alert("恭喜你中奖啦！520红包"); console.log("rdm=" + rdm + "，num=" + num + "，" + "520红包"); }
                     }, 4000);
                 }
             }, 30);
